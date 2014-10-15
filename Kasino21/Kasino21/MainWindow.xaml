@@ -1,0 +1,20 @@
+﻿<Window x:Name="MainWindow1" x:Class="Kasino21.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Height="467" Width="668" ResizeMode="NoResize">
+    <Grid x:Name="MainGrid" Background="#FF4AAA26">
+        <Label Content="Игрок" Margin="0,10,83,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="65"/>
+        <Label Content="Компьютер" Margin="0,41,68,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="80"/>
+        <Button x:Name="btn1" Content="Выбрать стол" Margin="524,375,23,27" Click="btn1_Click"/>
+        <Label x:Name="lb1" Content="0" HorizontalAlignment="Left" Margin="599,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.119,-0.375" Width="25"/>
+        <Label x:Name="lb2" Content="0" HorizontalAlignment="Left" Margin="599,41,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnTurn" Content="Следующая карта" HorizontalAlignment="Left" Margin="31,375,0,0" VerticalAlignment="Top" Width="124" Height="37" Click="btnTurnClick"/>
+        <Button x:Name="btnUserCard" Content="" HorizontalAlignment="Left" Margin="177,203,0,0" VerticalAlignment="Top" Width="100" Height="150" ClipToBounds="True" IsEnabled="False"/>
+        <Label Content="Ваша карта" HorizontalAlignment="Left" Margin="177,172,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="btnComputerCard" Content="" HorizontalAlignment="Left" Margin="365,203,0,0" VerticalAlignment="Top" Width="100" Height="150" IsEnabled="False"/>
+        <Label Content="Компьютер" HorizontalAlignment="Left" Margin="365,172,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="btnEndGame" Content="Начать заново" HorizontalAlignment="Left" Margin="31,316,0,0" VerticalAlignment="Top" Width="124" RenderTransformOrigin="0.24,-0.5" Height="37" Click="btnEndGameClick"/>
+        <Button x:Name="btnStop" Content="Стоп" HorizontalAlignment="Left" Margin="177,375,0,0" VerticalAlignment="Top" Width="100" Height="37" Click="btnStopOnClick"/>
+        <Image x:Name="img1" HorizontalAlignment="Left" Height="139" Margin="31,10,0,0" VerticalAlignment="Top" Width="100"/>
+
+    </Grid>
+</Window>
