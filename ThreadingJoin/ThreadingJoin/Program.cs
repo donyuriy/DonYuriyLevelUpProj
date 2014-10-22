@@ -49,18 +49,14 @@ namespace ThreadingJoin
             th1.Start(1);   //старт потоков
             th2.Start(2);
             th3.Start(3);
-            Console.WriteLine("Variable's value is {0}", mObj.flag);  //промежуточное значение искомой переменной  
+            
+            Console.WriteLine("Variable's value is {0}", mObj.flag);  //промежуточное значение искомой переменной (при уже запущеных дочерних потоках)
             Console.WriteLine();
-            while (true)
-            {
-                if (th1.IsAlive || th2.IsAlive || th3.IsAlive)  //
-                {
-                    Thread.Sleep(5);
-                    Console.WriteLine("Main thread stoped");    //если Дочерние потоки не завершены, то останавливаем Основной
-                }
-                else
-                    break;
-            }
+
+            th1.Join(); //основной поток ожидает завершения дочерних
+            th2.Join();
+            th3.Join();
+
             Console.WriteLine("Main Tread continued");
             Console.WriteLine();
             Console.WriteLine("Variable's value is {0}", mObj.flag);  //конечное значение искомой переменной
